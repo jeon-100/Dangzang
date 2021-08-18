@@ -1,0 +1,10 @@
+.hideme {
+  font-size: 5em;
+  color: white;
+}
+
+#num {
+  color: black;
+  opacity: 0;
+  position: fixed;
+}

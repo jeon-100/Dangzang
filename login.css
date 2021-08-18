@@ -1,0 +1,113 @@
+.content {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#id,
+#pw {
+  height: 30px;
+  padding: 10px;
+  margin: 5px;
+  width: 400px;
+  margin-top: 10px;
+  border: 2px solid #c9c9c9;
+}
+
+#lgbt {
+  width: 400px;
+  background-color: #203864;
+  text-align: center;
+  padding: 20px;
+  border-radius: 4px;
+  margin-left: 4px;
+  padding-right: 5px;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.line {
+  width: 440px;
+  height: 1px;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.ip {
+  margin: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#c {
+  cursor: pointer;
+}
+
+.more_buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#QR,
+#ol {
+  background-color: white;
+  border-radius: 2px;
+  border: 2px solid #94b0e4;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 16px 20px;
+  width: 150px;
+  text-align: center;
+}
+
+.information {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.finder {
+  margin-top: 50px;
+}
+
+.linec {
+  border-right: 1px solid #c9c9c9;
+}
+
+#id_finder,
+#pw_finder,
+#sign_in {
+  text-align: center;
+  margin: 0px 10px;
+  margin-top: 50px;
+  color: gray;
+}
+
+#loginlogo {
+  width: 300px;
+  margin: 56px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+#login {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#a {
+  margin-left: 10px;
+}

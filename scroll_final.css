@@ -1,0 +1,80 @@
+/*.section {
+  color: black;
+}*/
+
+.s0 {
+  background-color: black;
+}
+
+.ss1 :not(#ss1_1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#ss1_1 {
+  height: 76px;
+  width: 600px;
+  margin-left: 10em;
+  margin-top: 0px;
+}
+
+#ss1_2 {
+  height: 430px;
+  width: 1100px;
+  margin-left: 24em;
+  margin-top: 40px;
+}
+
+#ss1_3 {
+  height: 120px;
+  width: 980px;
+  margin-top: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+#ss1_3 {
+  position: absolute;
+  z-index: 2;
+}
+
+#ss1_4 {
+  width: 86em;
+  margin-top: 28px;
+}
+
+#line1 {
+  width: 46em;
+  height: 1px;
+  border-style: dotted;
+  border-bottom: 1px;
+  border-color: #ff9933;
+  margin-top: 10px;
+}
+
+#ss2_1 {
+  position: absolute;
+  z-index: 1;
+  margin-left: 20em;
+  height: 280px;
+  margin-top: 80px;
+}
+
+#ss2_2 {
+  height: 400px;
+  width: 78%;
+  margin-left: 15em;
+}
+
+#ment3_container {
+  align-items: center;
+  align-content: center;
+}
+
+.s2 {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

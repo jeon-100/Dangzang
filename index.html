@@ -1,0 +1,216 @@
+<!--html max width 설정하기!-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>당신을 위한 장학금, 당장</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="./styles/main.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#letter").hide();
+        $("#letter").delay(4500).fadeIn(3000);
+      });
+    </script>
+    <link rel="stylesheet" href="textani.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="fullpage.min.css" />
+    <script type="text/javascript" src="fullpage.min.js"></script>
+    <link rel="stylesheet" href="./scroll_final.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav style="z-index: 10" class="navi">
+        <div id="logotitle"><a href="index.html">
+          <span id="title"><b>: 당신을 위한 장학금</b></span>
+          <img style="z-index: 10" src="./public/img/logo2.png" id="logo" />
+        </a></div>
+        <div id="mainbar">
+          <a href="find.html"><h3 class="bar">장학금 찾기</h3></a>
+          <a href="login.html"><h3 class="bar">로그인</h3></a>
+          <h3 class="bar">로그아웃</h3>
+        </div>
+      </nav>
+    </div>
+    <p class="write" id="write" style="z-index: 100">
+      <a href="find.html">
+        <img
+          src="./public/img/write.png"
+          style="
+            width: 20px;
+            padding-left: 28px;
+            padding-right: 30px;
+            padding-top: 6px;
+            z-index: 100;
+          "
+        /><span class="write">장학금 찾기</span>
+      </a>
+    </p>
+    <div id="fullpage">
+      <div class="section s1">
+        <article>
+          <!--<img src="letterbox.png" width="500" id="letterbox" />-->
+          <script type="text/javascript">
+            $(function () {
+              var welcomeSection = $(".welcome-section"),
+                enterButton = welcomeSection.find(".enter-button");
+
+              setTimeout(function () {
+                welcomeSection.removeClass("content-hidden");
+              }, 800);
+              enterButton.on("click", function (e) {
+                e.preventDefault();
+                welcomeSection.fadeOut();
+              });
+            });
+          </script>
+          <div id="intro">
+            <div class="typewriter">
+              <div id="detail">당신을 위한 장학금을 찾아보세요,</div>
+            </div>
+            <div class="welcome-section content-hidden" id="name">
+              <div class="content-wrap">
+                <ul class="fly-in-text">
+                  <li style="color: white">당</li>
+                  <!--<li>!</li>-->
+                  <li style="color: white">장</li>
+                  <li style="color: white">!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--<img src="letter.png" id="letter" />-->
+        </article>
+      </div>
+      <div
+        class="section s2"
+        style="
+          background-image: url(./public/img/background3.png);
+          flex-direction: column;
+          justify-items: center;
+        "
+      >
+        <div id="explain">
+          <div
+            id="content"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              position: fixed;
+              margin-left: 50%;
+              margin: 0 auto;
+              left: 0;
+              right: 0;
+              margin-top: 12%;
+            "
+          >
+            <h2
+              id="service"
+              style="color: #e2edff; margin-bottom: 10px; display: none"
+            >
+              당장은 나에게 맞는 장학금을 찾아주는 당신만의 장학금 찾기
+              서비스입니다.
+            </h2>
+            <br />
+            <div style="display: flex">
+              <img
+                src="./public/img/1.png"
+                style="width: 200px; padding: 20px; margin: 0px 30px"
+                class="motion"
+              />
+              <img
+                src="./public/img/2.png"
+                style="width: 200px; padding: 20px; margin: 0px 30px"
+                class="motion"
+              />
+              <img
+                src="./public/img/3.png"
+                style="width: 200px; padding: 20px; margin: 0px 30px"
+                class="motion"
+              />
+            </div>
+          </div>
+          <div
+            id="content"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <ul style="display: flex; list-style: none">
+              <li class="ex">단 몇 번의 입력으로</li>
+
+              <li class="ex">나에게 꼭 맞는 장학금을</li>
+
+              <li class="ex">장학금 성격별로 확인하자!</li>
+            </ul>
+          </div>
+          <br />
+          <div
+            id="use"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              margin-top: 0px;
+            "
+          >
+            <ul style="list-style: none; line-height: 28px">
+
+            <h3
+              style="
+                background-color: #d8def0;
+                padding: 10px 20px;
+                border-radius: 20px;
+              "
+            >
+              지금 당장 당신의 장학금을 찾아보세요!
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      new fullpage("#fullpage", {
+        licenseKey: "723D80FA-B0594F94-822AB278-F3888EA3",
+        /*sectionsColor: ['#ffcccc' ,
+      '#ccffcc' , '#ffeecc' , '#ffeeaa'],*/ navigation: true,
+      });
+      var step;
+      $(window).bind("wheel", function (event) {
+        if (
+          event.originalEvent.wheelDelta > 0 ||
+          event.originalEvent.detail < 0
+        ) {
+        } else {
+          // scroll down
+          $(document).ready(function () {
+            $("#service").fadeIn(4000);
+          });
+          $(function () {
+            $(".motion").css({
+              animation: "motion 4s linear 1.5s infinite",
+              "margin-top": "0",
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -251,7 +251,7 @@ img {
 #sub_main {
   display: flex;
   justify-content: center;
-  z-index: -1;
+
   height: 100%;
   margin-top: 20px;
 }

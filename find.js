@@ -1,3 +1,7 @@
+window.onload = function () {
+  window.open("https://118.67.129.218:5000/", "_blank");
+};
+
 function change() {
   var itemidSelected = document.getElementsByName("info_mj");
   var itemID = itemidSelected.options[itemidSelected.selectedIndex].value;
@@ -64,6 +68,8 @@ function submit() {
       // 그림 지우기
       var pic = document.getElementById("before_search");
       pic.style.display = "none";
+      var sub = document.getElementById("sub_container");
+      sub.style.display = "flex";
 
       // 추천 장학금 개수 세기
       var cnt_sch = 0;
@@ -89,6 +95,8 @@ function submit() {
           else if (cluster_name == "feature") data_cluster_name = "특별 장학금";
           else if (cluster_name == "activity_0")
             data_cluster_name = "활동성 장학금";
+          else if (cluster_name == "all_cluster")
+            data_cluster_name = "AI Insight";
           else if (cluster_name == "activity_1")
             data_cluster_name = "수혜성 장학금";
           else if (cluster_name == "characteristic_0")
@@ -280,6 +288,7 @@ function cluster(cnt) {
   else if (cluster_name == "feature") data_cluster_name = "특별 장학금";
   else if (cluster_name == "activity_0") data_cluster_name = "활동성 장학금";
   else if (cluster_name == "activity_1") data_cluster_name = "수혜성 장학금";
+  else if (cluster_name == "all_cluster") data_cluster_name = "AI Insight";
   else if (cluster_name == "characteristic_0")
     data_cluster_name = "소득연계 장학금";
   else if (cluster_name == "characteristic_1")
@@ -355,7 +364,7 @@ function cluster(cnt) {
       newDIV.appendChild(moneyDIV);
 
       var moneyInfoDIV = document.createElement("div");
-      moneyInfoDIV.setAttribute("class", "s_moeny_info");
+      moneyInfoDIV.setAttribute("class", "s_money_info");
       if (price == "0") price = "- ";
       moneyInfoDIV.innerHTML = `${price}원`;
       newDIV.appendChild(moneyInfoDIV);
@@ -380,17 +389,26 @@ function cluster(cnt) {
       var price = sch.scholarship_price
         .toString()
         .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+      var s_name = sch.name;
+
+      var s_arr = s_name.split("(");
+      if (s_arr.length != 1) {
+        s_name = s_arr[0] + "<br>" + "(" + s_arr[1];
+      } else {
+        s_name = s_arr[0];
+      }
 
       var newDIV = document.createElement("div");
       newDIV.setAttribute("class", "scholarship");
       newDIV.setAttribute("onclick", "scholarship(" + cnt + "," + i + ")");
-      newDIV.style.width = "191px";
+      newDIV.style.width = "161px";
       var pw = document.getElementById(`pw${cnt}`);
       pw.appendChild(newDIV);
 
       var nameDIV = document.createElement("div");
       nameDIV.setAttribute("class", "s_name");
-      nameDIV.innerHTML = sch.name;
+      nameDIV.innerHTML = s_name;
+
       newDIV.appendChild(nameDIV);
 
       var periodDIV = document.createElement("div");
@@ -409,7 +427,7 @@ function cluster(cnt) {
       newDIV.appendChild(moneyDIV);
 
       var moneyInfoDIV = document.createElement("div");
-      moneyInfoDIV.setAttribute("class", "s_moeny_info");
+      moneyInfoDIV.setAttribute("class", "s_money_info");
       moneyInfoDIV.innerHTML = `${price}원`;
       newDIV.appendChild(moneyInfoDIV);
     }

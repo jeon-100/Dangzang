@@ -139,7 +139,7 @@ function submit() {
 
   request.open(
     "GET",
-    `http://johnbuzz98.iptime.org:9800/main_request?name=${info_name}&age=${info_age}&sex=${info_sex}&id_students=${info_id}&major=${info_mj}&last_score=${info_score1}&avg_score=${info_score2}&place=${info_region}&income=${info_money}&semester=${info_sem}`,
+    `https://118.67.129.218:5000/main_request?name=${info_name}&age=${info_age}&sex=${info_sex}&id_students=${info_id}&major=${info_mj}&last_score=${info_score1}&avg_score=${info_score2}&place=${info_region}&income=${info_money}&semester=${info_sem}`,
     true
   );
   request.send();
